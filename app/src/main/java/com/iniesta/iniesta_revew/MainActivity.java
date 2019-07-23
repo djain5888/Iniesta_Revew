@@ -6,10 +6,12 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
 
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.FrameLayout;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -27,15 +29,17 @@ public class MainActivity extends AppCompatActivity {
     boolean check=true;
 
     public DrawerLayout drawerLayout;
-
-
     public NavigationView navigationView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        navigationView=findViewById(R.id.navigationView);
+
+        navigationView = findViewById(R.id.navigationView);
         drawerLayout = findViewById(R.id.drawer_layout);
+        t = new ActionBarDrawerToggle(this, drawerLayout,R.string.navigation_drawer_open,R.string.navigation_drawer_close );
+
         final Menu v=navigationView.getMenu();
         t=new ActionBarDrawerToggle(this, drawerLayout,R.string.navigation_drawer_open,R.string.navigation_drawer_close );
         drawerLayout.addDrawerListener(t);
@@ -80,8 +84,15 @@ public class MainActivity extends AppCompatActivity {
 
         });
 
+        Fragment itemsFragment = new ItemsFragment();
+
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.fragments_container, itemsFragment)
+                .commit();
 
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 

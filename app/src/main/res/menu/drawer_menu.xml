@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:showIn="navigation_view">
 
     <group android:checkableBehavior="single">
             <item android:id="@+id/latest_news"
-            android:title="Latest News" />
+            android:title="Latest News"
+                app:actionLayout="@layout/spinner_menu" />
             <item android:id="@+id/nav_entertainment"
             android:title="Entertainment" />
             <item android:id="@+id/nav_politics"
@@ -27,14 +28,19 @@
             <item android:id="@+id/national_news"
             android:title="National" />
     </group>
-    <item android:title="Support">
+    <item android:title="Support"
+        android:id="@+id/sup">
         <menu>
             <item android:id="@+id/nav_share"
-                android:title="Share"/>
+                android:title="Share"
+                android:icon="@drawable/icon_down"
+                />
             <item android:id="@+id/nav_feedback"
-                android:title="Feedback"/>
+                android:title="Feedback"
+                android:visible="false"/>
             <item android:id="@+id/nav_contact_us"
-                android:title="Contact us"/>
+                android:title="Contact us"
+                android:visible="false"/>
         </menu>
     </item>
     <item android:title="Personalize">

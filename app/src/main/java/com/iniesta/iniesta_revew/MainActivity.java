@@ -146,7 +146,7 @@ public class MainActivity extends AppCompatActivity {
         getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.fragments_container, itemsFragment)
-                .addToBackStack(null)
+
                 .commit();
 
     }
@@ -160,21 +160,5 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    @Override
-    public void onBackPressed() {
-        if(getSupportFragmentManager().getBackStackEntryCount()>0)
-        {
-            getSupportFragmentManager()
-                    .beginTransaction()
-                    .replace(R.id.fragments_container, itemsFragment)
-                    .commit();
 
-           // getSupportFragmentManager().popBackStack();
-        }
-        else
-        {
-            super.onBackPressed();
-        }
-
-    }
 }

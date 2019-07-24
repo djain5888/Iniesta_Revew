@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
     public DrawerLayout drawerLayout;
     public NavigationView navigationView;
+    Fragment itemsFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -84,11 +85,12 @@ public class MainActivity extends AppCompatActivity {
 
         });
 
-        Fragment itemsFragment = new ItemsFragment();
+        itemsFragment = new ItemsFragment();
 
         getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.fragments_container, itemsFragment)
+                .addToBackStack(null)
                 .commit();
 
     }
@@ -100,5 +102,23 @@ public class MainActivity extends AppCompatActivity {
             return true;
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onBackPressed() {
+        if(getSupportFragmentManager().getBackStackEntryCount()>0)
+        {
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.fragments_container, itemsFragment)
+                    .commit();
+
+           // getSupportFragmentManager().popBackStack();
+        }
+        else
+        {
+            super.onBackPressed();
+        }
+
     }
 }

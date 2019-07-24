@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ItemDetailFragent"
+    android:orientation="vertical">
+
+  <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="vertical">
+
+          <ImageView
+              android:id="@+id/item_image2"
+              android:layout_width="match_parent"
+              android:layout_height="300dp"
+              android:layout_marginTop="8dp"/>
+
+          <TextView
+              android:id="@+id/name"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="Name Of Device"
+              android:gravity="right"
+              android:textSize="30dp"
+              android:textColor="@color/black"
+              android:layout_marginTop="10dp"
+              android:layout_marginRight="20dp"/>
+
+          <TextView
+              android:id="@+id/price"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="Price Of Device In India"
+              android:gravity="right"
+              android:textSize="20dp"
+              android:layout_marginTop="0dp"
+              android:layout_marginRight="20dp"/>
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="72dp"
+              android:orientation="horizontal"
+              android:layout_marginTop="10dp">
+
+              <LinearLayout
+                  android:id="@+id/review"
+                  android:layout_width="0dp"
+                  android:layout_height="match_parent"
+                  android:layout_weight="1"
+                  android:orientation="vertical">
+
+                  <ImageView
+                      android:layout_width="match_parent"
+                      android:layout_height="0dp"
+                      android:layout_weight="2"
+                      android:src="@drawable/review"/>
+
+                  <TextView
+                      android:layout_width="match_parent"
+                      android:layout_height="0dp"
+                      android:layout_weight="1"
+                      android:text="Review"
+                      android:gravity="center"/>
+
+              </LinearLayout>
+
+              <LinearLayout
+                  android:layout_width="0dp"
+                  android:id="@+id/buynow"
+                  android:layout_height="match_parent"
+                  android:layout_weight="1"
+                  android:orientation="vertical">
+
+                  <ImageView
+                      android:layout_width="match_parent"
+                      android:layout_height="0dp"
+                      android:layout_weight="2"
+                      android:src="@drawable/buynow"/>
+
+                  <TextView
+                      android:layout_width="match_parent"
+                      android:layout_height="0dp"
+                      android:layout_weight="1"
+                      android:text="Buy Now"
+                      android:gravity="center"/>
+
+              </LinearLayout>
+
+              <LinearLayout
+                  android:layout_width="0dp"
+                  android:id="@+id/rating"
+                  android:layout_height="match_parent"
+                  android:layout_weight="1"
+                  android:orientation="vertical">
+
+                  <ImageView
+                      android:layout_width="match_parent"
+                      android:layout_height="0dp"
+                      android:layout_weight="2"
+                      android:src="@drawable/star"/>
+
+                  <TextView
+                      android:layout_width="match_parent"
+                      android:layout_height="0dp"
+                      android:layout_weight="1"
+                      android:text="4.5 /5"
+                      android:gravity="center"/>
+
+              </LinearLayout>
+
+          </LinearLayout>
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="Introduction :-"
+              android:textSize="20dp"
+              android:gravity="center"
+              android:layout_marginTop="10dp"
+              android:textColor="@color/black"/>
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_margin="8dp"
+              android:gravity="center"
+              android:text="Step by step and year by year, we're now at 10 - the Samsung Galaxy S-series have matured over the past decade with big and incremental upgrades alike bringing us closer to that elusive 'perfect smartphone'. The Galaxy S10 is by definition the best one ever, so let's see just how good the best is."/>
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="Design :-"
+              android:textSize="20dp"
+              android:gravity="center"
+              android:layout_marginTop="10dp"
+              android:textColor="@color/black"/>
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_margin="8dp"
+              android:gravity="center"
+              android:text="Step by step and year by year, we're now at 10 - the Samsung Galaxy S-series have matured over the past decade with big and incremental upgrades alike bringing us closer to that elusive 'perfect smartphone'. The Galaxy S10 is by definition the best one ever, so let's see just how good the best is."/>
+
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="Full Specification :-"
+              android:textSize="20dp"
+              android:gravity="center"
+              android:layout_marginTop="10dp"
+              android:textColor="@color/black"/>
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_margin="8dp"
+              android:gravity="center"
+              android:text="Step by step and year by year, we're now at 10 - the Samsung Galaxy S-series have matured over the past decade with big and incremental upgrades alike bringing us closer to that elusive 'perfect smartphone'. The Galaxy S10 is by definition the best one ever, so let's see just how good the best is."/>
+
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="Tests :-"
+              android:textSize="20dp"
+              android:gravity="center"
+              android:layout_marginTop="10dp"
+              android:textColor="@color/black"/>
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_margin="8dp"
+              android:gravity="center"
+              android:text="Step by step and year by year, we're now at 10 - the Samsung Galaxy S-series have matured over the past decade with big and incremental upgrades alike bringing us closer to that elusive 'perfect smartphone'. The Galaxy S10 is by definition the best one ever, so let's see just how good the best is."/>
+
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="Pro's :-"
+              android:textSize="20dp"
+              android:gravity="center"
+              android:layout_marginTop="10dp"
+              android:textColor="@color/black"/>
+
+         <TextView
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginLeft="15dp"
+             android:layout_margin="10dp"
+             android:text=" 1.) Heyy \n 2.) Heyy \n 3.) Heyy \n 4.) Heyy"/>
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="Con's :-"
+              android:textSize="20dp"
+              android:gravity="center"
+              android:layout_marginTop="10dp"
+              android:textColor="@color/black"/>
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="15dp"
+              android:layout_margin="10dp"
+              android:text=" 1.) Heyy \n 2.) Heyy \n 3.) Heyy \n 4.) Heyy"/>
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="Our Team's Creed :-"
+              android:textSize="20dp"
+              android:gravity="center"
+              android:layout_marginTop="10dp"
+              android:textColor="@color/black"/>
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="15dp"
+              android:layout_margin="10dp"
+              android:text=" 1.) Heyy \n 2.) Heyy \n 3.) Heyy \n 4.) Heyy"/>
+
+      </LinearLayout>
+
+  </ScrollView>
+
+</LinearLayout>

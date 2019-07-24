@@ -39,7 +39,10 @@ public class ItemsFragment extends Fragment {
         ItemsRecyclerAdapter.RecyclerViewClickListener listener = new ItemsRecyclerAdapter.RecyclerViewClickListener() {
             @Override
             public void onClick(View view, int position) {
-                Toast.makeText(getContext(),"Item Clicked", Toast.LENGTH_SHORT).show();
+                String url = items.get(position).getImageUrl();
+                Fragment detailFragment = new ItemDetailFragent();
+                ((ItemDetailFragent) detailFragment).getData(url,items.get(position).getName(),items.get(position).getPrice());
+                getFragmentManager().beginTransaction().replace(R.id.fragments_container,detailFragment).commit();
             }
         };
 

@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import android.os.Bundle;
 import android.view.Menu;
@@ -69,13 +70,16 @@ public class MainActivity extends AppCompatActivity {
                     if(check==true) {
                         v.findItem(R.id.nav_feedback).setVisible(true);
                         v.findItem(R.id.nav_contact_us).setVisible(true);
+                        v.findItem(R.id.nav_share).setIcon(R.drawable.ic_action_name);
                         check=false;
+
                     }
                     else
                     {
                         check=true;
                         v.findItem(R.id.nav_feedback).setVisible(false);
                         v.findItem(R.id.nav_contact_us).setVisible(false);
+                        v.findItem(R.id.nav_share).setIcon(R.drawable.icon_down);
 
                     }
                     }
@@ -90,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
         getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.fragments_container, itemsFragment)
-                .addToBackStack(null)
+                .add(new ItemsFragment(),"item")
                 .commit();
 
     }
@@ -104,21 +108,6 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    @Override
-    public void onBackPressed() {
-        if(getSupportFragmentManager().getBackStackEntryCount()>0)
-        {
-            getSupportFragmentManager()
-                    .beginTransaction()
-                    .replace(R.id.fragments_container, itemsFragment)
-                    .commit();
-
-           // getSupportFragmentManager().popBackStack();
-        }
-        else
-        {
-            super.onBackPressed();
-        }
 
     }
-}
+

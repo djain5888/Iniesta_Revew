@@ -42,7 +42,7 @@ public class ItemsFragment extends Fragment {
                 String url = items.get(position).getImageUrl();
                 Fragment detailFragment = new ItemDetailFragent();
                 ((ItemDetailFragent) detailFragment).getData(url,items.get(position).getName(),items.get(position).getPrice());
-                getFragmentManager().beginTransaction().replace(R.id.fragments_container,detailFragment).commit();
+                getFragmentManager().beginTransaction().replace(R.id.fragments_container,detailFragment).addToBackStack(null).commit();
             }
         };
 

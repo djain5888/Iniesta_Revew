@@ -4,52 +4,105 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:showIn="navigation_view">
 
-    <group android:checkableBehavior="single">
-            <item android:id="@+id/latest_news"
-            android:title="Latest News"
-                app:actionLayout="@layout/spinner_menu" />
-            <item android:id="@+id/nav_entertainment"
-            android:title="Entertainment" />
-            <item android:id="@+id/nav_politics"
-            android:title="Politics" />
-            <item android:id="@+id/nav_gadgets"
-            android:title="Gadgets" />
-
-            <item android:id="@+id/nav_sports"
-            android:title="Sports" />
-            <item android:id="@+id/nav_business"
-            android:title="Business" />
-            <item android:id="@+id/nav_health"
-            android:title="Health" />
-            <item android:id="@+id/nav_education"
-            android:title="Education" />
-            <item android:id="@+id/world_news"
-            android:title="World" />
-            <item android:id="@+id/national_news"
-            android:title="National" />
-    </group>
-    <item android:title="Support"
-        android:id="@+id/sup">
+    <item android:title="Mobile">
         <menu>
-            <item android:id="@+id/nav_share"
-                android:title="Share"
+            <item android:id="@+id/mobile_nav"
+                android:title="Mobiles"
                 android:icon="@drawable/icon_down"
                 />
-            <item android:id="@+id/nav_feedback"
-                android:title="Feedback"
+            <item android:id="@+id/mobile_nav_latest"
+                android:title="Latest Mobiles"
+                android:visible="false"
+                />
+            <item android:id="@+id/mobile_nav_best"
+                android:title="Best Mobiles"
                 android:visible="false"/>
-            <item android:id="@+id/nav_contact_us"
-                android:title="Contact us"
+            <item android:id="@+id/mobile_nav_top10"
+                android:title="Top 10 Mobiles"
                 android:visible="false"/>
         </menu>
     </item>
-    <item android:title="Personalize">
+
+    <item android:title="Laptops">
         <menu>
-            <item android:id="@+id/nav_settings"
-                android:title="Change Theme"/>
+            <item android:id="@+id/laptops_nav"
+                android:title="Laptops"
+                android:icon="@drawable/icon_down"
+                />
+            <item android:id="@+id/laptops_nav_latest"
+                android:title="Latest Laptops"
+                android:visible="false"
+                />
+            <item android:id="@+id/laptops_nav_best"
+                android:title="Best Laptops"
+                android:visible="false"/>
+            <item android:id="@+id/laptops_nav_top10"
+                android:title="Top 10 Laptops"
+                android:visible="false"/>
         </menu>
     </item>
 
+    <item android:title="Smart Home">
+        <menu>
+            <item android:id="@+id/smart_home"
+                android:title="Smart Home"
+                android:icon="@drawable/icon_down"
+                />
+            <item android:id="@+id/tv_nav"
+                android:title="TV"
+                android:visible="false"
+                />
+            <item android:id="@+id/washing_nav"
+                android:title="Washing Machine"
+                android:visible="false"/>
+            <item android:id="@+id/refrigerator_nav"
+                android:title="Refrigerator"
+                android:visible="false"/>
+            <item android:id="@+id/ac_nav"
+                android:title="AC"
+                android:visible="false"/>
+            <item android:id="@+id/water_nav"
+                android:title="Water Purifier"
+                android:visible="false"/>
+            <item android:id="@+id/smart_nav"
+                android:title="Smart Light"
+                android:visible="false"/>
+            <item android:id="@+id/geyser_nav"
+                android:title="Geyser"
+                android:visible="false"/>
+        </menu>
+    </item>
 
+    <item android:title="Gadgets">
+        <menu>
+            <item android:id="@+id/gadgets_nav"
+                android:title="Gadgets"
+                android:icon="@drawable/icon_down" />
+            <item android:id="@+id/gaming_nav"
+                android:title="TV"
+                android:visible="false" />
+            <item android:id="@+id/speakers_nav"
+                android:title="Speakers"
+                android:visible="false"/>
+            <item android:id="@+id/tablets_nav"
+                android:title="Tablets"
+                android:visible="false"/>
+            <item android:id="@+id/cameras_nav"
+                android:title="Cameras"
+                android:visible="false"/>
+            <item android:id="@+id/headphones_nav"
+                android:title="Headphones"
+                android:visible="false"/>
+            <item android:id="@+id/printers_nav"
+                android:title="Printers"
+                android:visible="false"/>
+        </menu>
+    </item>
+
+    <item android:id="@+id/review_nav"
+        android:title="Review" />
+
+    <item android:id="@+id/contact_us"
+        android:title="Contact Us" />
 
 </menu>

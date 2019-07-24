@@ -51,18 +51,18 @@ public class ItemsFragment extends Fragment {
     }
 
     public void addItems(){
-        items.add(new Item("http://curefit.xyz/shop/images/1.jpg","SONY S5","Mobile",15000));
-        items.add(new Item("http://curefit.xyz/shop/images/2.jpg","SAMSUNG GALAXY S5","Mobile",25000));
-        items.add(new Item("http://curefit.xyz/shop/images/1.jpg","SONY S5","Mobile",15000));
-        items.add(new Item("http://curefit.xyz/shop/images/2.jpg","SAMSUNG GALAXY S5","Mobile",25000));
-        items.add(new Item("http://curefit.xyz/shop/images/1.jpg","SONY S5","Mobile",15000));
-        items.add(new Item("http://curefit.xyz/shop/images/2.jpg","SAMSUNG GALAXY S5","Mobile",25000));
-        items.add(new Item("http://curefit.xyz/shop/images/1.jpg","SONY S5","Mobile",15000));
-        items.add(new Item("http://curefit.xyz/shop/images/2.jpg","SAMSUNG GALAXY S5","Mobile",25000));
-        items.add(new Item("http://curefit.xyz/shop/images/1.jpg","SONY S5","Mobile",15000));
-        items.add(new Item("http://curefit.xyz/shop/images/2.jpg","SAMSUNG GALAXY S5","Mobile",25000));
-        items.add(new Item("http://curefit.xyz/shop/images/1.jpg","SONY S5","Mobile",15000));
-        items.add(new Item("http://curefit.xyz/shop/images/2.jpg","SAMSUNG GALAXY S5","Mobile",25000));
+        items.add(new Item("http://curefit.xyz/shop/images/1.jpg","SONY S5","Mobile",15000,"https://www.amazon.in/","https://www.flipkart.com/"));
+        items.add(new Item("http://curefit.xyz/shop/images/2.jpg","SAMSUNG GALAXY S5","Mobile",25000,"https://www.amazon.in/","https://www.flipkart.com/"));
+        items.add(new Item("http://curefit.xyz/shop/images/1.jpg","SONY S5","Mobile",15000,"https://www.amazon.in/","https://www.flipkart.com/"));
+        items.add(new Item("http://curefit.xyz/shop/images/2.jpg","SAMSUNG GALAXY S5","Mobile",25000,"https://www.amazon.in/","https://www.flipkart.com/"));
+        items.add(new Item("http://curefit.xyz/shop/images/1.jpg","SONY S5","Mobile",15000,"https://www.amazon.in/","https://www.flipkart.com/"));
+        items.add(new Item("http://curefit.xyz/shop/images/2.jpg","SAMSUNG GALAXY S5","Mobile",25000,"https://www.amazon.in/","https://www.flipkart.com/"));
+        items.add(new Item("http://curefit.xyz/shop/images/1.jpg","SONY S5","Mobile",15000,"https://www.amazon.in/","https://www.flipkart.com/"));
+        items.add(new Item("http://curefit.xyz/shop/images/2.jpg","SAMSUNG GALAXY S5","Mobile",25000,"https://www.amazon.in/","https://www.flipkart.com/"));
+        items.add(new Item("http://curefit.xyz/shop/images/1.jpg","SONY S5","Mobile",15000,"https://www.amazon.in/","https://www.flipkart.com/"));
+        items.add(new Item("http://curefit.xyz/shop/images/2.jpg","SAMSUNG GALAXY S5","Mobile",25000,"https://www.amazon.in/","https://www.flipkart.com/"));
+        items.add(new Item("http://curefit.xyz/shop/images/1.jpg","SONY S5","Mobile",15000,"https://www.amazon.in/","https://www.flipkart.com/"));
+        items.add(new Item("http://curefit.xyz/shop/images/2.jpg","SAMSUNG GALAXY S5","Mobile",25000,"https://www.amazon.in/","https://www.flipkart.com/"));
     }
 
 }

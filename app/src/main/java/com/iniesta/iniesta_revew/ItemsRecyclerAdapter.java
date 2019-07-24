@@ -1,6 +1,8 @@
 package com.iniesta.iniesta_revew;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,17 +38,36 @@ public class ItemsRecyclerAdapter extends RecyclerView.Adapter<ItemsRecyclerAdap
     @Override
     public void onBindViewHolder(@NonNull ItemsRecyclerAdapter.ItemsViewHolder holder, int position) {
 
-        Item item = itemsList.get(position);
+        final Item item = itemsList.get(position);
 
         Glide.with(mContext)
                 .load(item.getImageUrl())
-                .centerCrop()
                 .placeholder(R.drawable.back)
                 .into(holder.itemImageView);
 
         holder.itemTypeView.setText(item.getType());
         holder.itemNameView.setText(item.getName());
         holder.itemPriceView.setText(String.valueOf(item.getPrice()));
+
+        holder.amazonLink.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String url = item.getAmazonLink();
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse(url));
+                mContext.startActivity(i);
+            }
+        });
+
+        holder.flipkartLink.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String url = item.getFlipkartLink();
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse(url));
+                mContext.startActivity(i);
+            }
+        });
     }
 
     @Override
@@ -64,6 +85,8 @@ public class ItemsRecyclerAdapter extends RecyclerView.Adapter<ItemsRecyclerAdap
         TextView itemTypeView;
         TextView itemNameView;
         TextView itemPriceView;
+        ImageView flipkartLink;
+        ImageView amazonLink;
 
         public RecyclerViewClickListener iListener;
 
@@ -77,6 +100,8 @@ public class ItemsRecyclerAdapter extends RecyclerView.Adapter<ItemsRecyclerAdap
             itemTypeView = itemView.findViewById(R.id.itemType);
             itemNameView = itemView.findViewById(R.id.itemName);
             itemPriceView = itemView.findViewById(R.id.itemPrice);
+            flipkartLink = itemView.findViewById(R.id.flipkartLink);
+            amazonLink = itemView.findViewById(R.id.amazonLink);
         }
 
 
